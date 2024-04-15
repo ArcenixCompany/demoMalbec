@@ -10,23 +10,20 @@ const trivia = {
   preguntas: [
     {
       id: 1,
-      pregunta: "¿Qué regiones de Argentina son las más famosas por la producción de Malbec?",
-      respuestas: [
-        "Mendoza", 
-        "San Juan", 
-        "Salta", 
-        "Todas las anteriores"
-      ],
+      pregunta:
+        "¿Qué regiones de Argentina son las más famosas por la producción de Malbec?",
+      respuestas: ["Mendoza", "San Juan", "Salta", "Todas las anteriores"],
       respuestaCorrecta: "Todas las anteriores",
     },
     {
       id: 2,
-      pregunta: "¿Qué diferencia hay entre un Malbec joven y un Malbec Reserva?",
+      pregunta:
+        "¿Qué diferencia hay entre un Malbec joven y un Malbec Reserva?",
       respuestas: [
-        "El tiempo de añejamiento en barrica", 
-        "La variedad de la uva", 
-        "El método de elaboración", 
-        "El precio"
+        "El tiempo de añejamiento en barrica",
+        "La variedad de la uva",
+        "El método de elaboración",
+        "El precio",
       ],
       respuestaCorrecta: "El tiempo de añejamiento en barrica",
     },
@@ -34,10 +31,10 @@ const trivia = {
       id: 3,
       pregunta: "¿Qué tipos de Malbec existen?",
       respuestas: [
-        "Tinto, blanco, rosado", 
-        "Dulce, seco, espumoso", 
-        "Joven, Reserva, Gran Reserva", 
-        "Todas las anteriores"
+        "Tinto, blanco, rosado",
+        "Dulce, seco, espumoso",
+        "Joven, Reserva, Gran Reserva",
+        "Todas las anteriores",
       ],
       respuestaCorrecta: "Todas las anteriores",
     },
@@ -56,10 +53,10 @@ const trivia = {
       id: 5,
       pregunta: "¿Por qué el Malbec argentino es tan popular en el mundo?",
       respuestas: [
-        "Por su sabor único y distintivo", 
-        "Por su relación calidad-precio", 
-        "Por ser un vino versátil que marida con muchas comidas", 
-        "Todas las anteriores"
+        "Por su sabor único y distintivo",
+        "Por su relación calidad-precio",
+        "Por ser un vino versátil que marida con muchas comidas",
+        "Todas las anteriores",
       ],
       respuestaCorrecta: "Todas las anteriores",
     },
@@ -67,10 +64,10 @@ const trivia = {
       id: 6,
       pregunta: "¿Qué factores influyen en el estilo de un Malbec?",
       respuestas: [
-        "Clima, suelo, altitud, método de elaboración", 
-        "La marca de la bodega", 
-        "El precio del vino", 
-        "La variedad de la uva"
+        "Clima, suelo, altitud, método de elaboración",
+        "La marca de la bodega",
+        "El precio del vino",
+        "La variedad de la uva",
       ],
       respuestaCorrecta: "Clima, suelo, altitud, método de elaboración",
     },
@@ -78,21 +75,23 @@ const trivia = {
       id: 7,
       pregunta: "¿Qué es la maceración carbónica y cómo afecta al Malbec?",
       respuestas: [
-        "Es un método de elaboración que aporta color y taninos al vino", 
-        "Es una técnica de marketing para vender más Malbec", 
-        "Es un tipo de uva que se utiliza para hacer Malbec", 
-        "Es una enfermedad que afecta a las viñas de Malbec"
+        "Es un método de elaboración que aporta color y taninos al vino",
+        "Es una técnica de marketing para vender más Malbec",
+        "Es un tipo de uva que se utiliza para hacer Malbec",
+        "Es una enfermedad que afecta a las viñas de Malbec",
       ],
-      respuestaCorrecta: "Es un método de elaboración que aporta color y taninos al vino",
+      respuestaCorrecta:
+        "Es un método de elaboración que aporta color y taninos al vino",
     },
     {
       id: 8,
-      pregunta: "¿Qué diferencia hay entre un Malbec de Mendoza y un Malbec de San Juan?",
+      pregunta:
+        "¿Qué diferencia hay entre un Malbec de Mendoza y un Malbec de San Juan?",
       respuestas: [
-        "El clima y el suelo", 
-        "La variedad de la uva", 
-        "El método de elaboración", 
-        "El precio"
+        "El clima y el suelo",
+        "La variedad de la uva",
+        "El método de elaboración",
+        "El precio",
       ],
       respuestaCorrecta: "El clima y el suelo",
     },
@@ -238,14 +237,6 @@ const Quiz = () => {
             </div>
           ) : (
             <div className="w-[100%] md:w-[70%] lg:w-[35%] backdrop-blur-sm bg-white/[.06] text-white p-5 text-xl border border-white rounded-lg mt-20 mx-auto">
-              <div>
-                <div className="flex mx-auto mt-4">
-                  <div className="pt-0 w-full h-fit mb-6">
-                    <canvas id="myChart"></canvas>
-                  </div>
-                </div>
-              </div>
-
               <div className={fontSerif.className}>
                 <h3 className="text-2xl font-bold pl-2">Resultados:</h3>
                 <p className="p-2">
@@ -274,11 +265,6 @@ const Quiz = () => {
                   Puntaje:{" "}
                   <span className="text-sky-400">{resultado.puntaje}</span>
                 </p>
-                <div className="btn shadow-glow">
-                  <Link href="/" >
-                    Volver a Jugar
-                  </Link>
-                </div>
               </div>
             </div>
           )}
