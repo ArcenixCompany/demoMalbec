@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import localFont from "next/font/local";
+import Link from "next/link";
+import ReloadButton from "@/components/ReloadButton ";
 
 const fontSerif = localFont({ src: "../../fonts/NotoSerifTangut.ttf" });
 const fontSageffine = localFont({ src: "../../fonts/Sageffine.otf" });
@@ -99,6 +101,7 @@ const trivia = {
 };
 
 const Quiz = () => {
+  
   const [preguntaActiva, setPreguntaActiva] = useState(0);
 
   const [checked, setChecked] = useState(false);
@@ -167,7 +170,7 @@ const Quiz = () => {
         </div> */}
       </div>
       <div>
-        <div className="w-[50%] mx-auto">
+        <div className="w-full md:w-[50%] mx-auto">
           {!mostrarResultado ? (
             <div className="text-white">
               <div className={fontSerif.className}>
@@ -254,7 +257,10 @@ const Quiz = () => {
                   Puntaje:{" "}
                   <span className="text-sky-400">{resultado.puntaje}</span>
                 </p>
-              </div>
+                <div>
+                  <ReloadButton/>
+                </div>
+              </div>              
             </div>
           )}
         </div>
