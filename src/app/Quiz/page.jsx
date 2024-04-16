@@ -159,35 +159,31 @@ const Quiz = () => {
     setChecked(false);
   };
   return (
-    <div className="bg-[url('../views/img/bg_uvas_rojo.jpg')] justify-center items-center min-h-screen p-5 ">
+    <div className=" justify-center items-center p-5 max-h-screen">
       <div className={fontSageffine.className}>
-        <div className="absolute top-0 right-0 m-7 text-4xl">
+        {/* <div className="absolute top-0 right-0 m-7 text-4xl">
           Trivia{" "}
           <span className="bg-white text-red-900 rounded-md p-2">Malbec</span>
-        </div>
+        </div> */}
       </div>
       <div>
-        <div className="">
+        <div className="w-[50%] mx-auto">
           {!mostrarResultado ? (
-            <div className="w-[100%] md:w-[70%] lg:w-[50%] text-white mt-14 mx-auto p-5">
-              {/* <h2 className="font-bold text-2xl">
-                Preguntas: {preguntaActiva + 1}{" "}
-                <span>/ {preguntas.length}</span>
-              </h2> */}
+            <div className="text-white">
               <div className={fontSerif.className}>
-                <h2 className="w-fit bg-white text-red-900 rounded-full font-bold text-xl py-2 px-10 my-2">
+                <h2 className="w-fit bg-white text-red-900 rounded-md font-bold text-xl py-2 px-10 my-2">
                   {preguntaActiva + 1}
                   {"º Pregunta"}
                 </h2>
               </div>
-              <div className="w-[80%]">
+              <div>
                 <div className={fontSageffine.className}>
-                  <h3 className="text-white text-4xl md:text-5xl lg:text-7xl p-3">
+                  <h3 className="text-white text-3xl">
                     {preguntas[preguntaActiva].pregunta}
                   </h3>
                 </div>
               </div>
-              <div className={fontSerif.className}>
+              <div className={`${fontSerif.className}`}>
                 {respuestas.map((respuesta, idx) => (
                   <li
                     key={idx}
@@ -226,13 +222,6 @@ const Quiz = () => {
                     </button>
                   </div>
                 )}
-              </div>
-              <div className={fontSageffine.className}>
-                <div className="text-center">
-                  <span className="text-4xl">
-                    Seleccione su respuesta<br></br>pulsando el cuadrado
-                  </span>
-                </div>
               </div>
             </div>
           ) : (
